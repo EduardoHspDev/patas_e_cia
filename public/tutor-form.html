@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutor — Patas & Cia</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header><a href="/">🐾 Patas &amp; Cia</a><nav><a href="/">Tutores</a><a href="/agenda.html">Agenda</a></nav></header>
+  <main>
+    <div class="card">
+      <h1 id="titulo">Novo tutor</h1>
+      <p class="sub">Campos com * são obrigatórios.</p>
+      <div id="alerta" class="alerta"></div>
+      <form id="form" novalidate>
+        <div class="grade">
+          <div class="campo">
+            <label for="nome">Nome *</label>
+            <input id="nome" name="nome" maxlength="100">
+            <span class="erro" data-erro="nome"></span>
+          </div>
+          <div class="campo">
+            <label for="telefone">Telefone *</label>
+            <input id="telefone" name="telefone" placeholder="(85) 99999-9999" inputmode="tel">
+            <span class="erro" data-erro="telefone"></span>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" maxlength="120">
+            <span class="erro" data-erro="email"></span>
+          </div>
+          <div class="campo">
+            <label for="endereco">Endereço</label>
+            <input id="endereco" name="endereco" maxlength="200">
+            <span class="erro" data-erro="endereco"></span>
+          </div>
+        </div>
+        <button class="btn" type="submit">Salvar</button>
+        <a class="btn sec" href="/">Cancelar</a>
+      </form>
+    </div>
+  </main>
+  <script src="/js/common.js"></script>
+  <script src="/js/tutor-form.js"></script>
+</body>
+</html>

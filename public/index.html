@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tutores — Patas & Cia</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header><a href="/">🐾 Patas &amp; Cia</a><nav><a href="/">Tutores</a><a href="/agenda.html">Agenda</a></nav></header>
+  <main>
+    <div class="card">
+      <h1>Tutores</h1>
+      <p class="sub">Busque pelo nome do tutor, telefone ou nome do animal.</p>
+      <div id="alerta" class="alerta"></div>
+      <div class="barra">
+        <input type="search" id="busca" placeholder="Buscar tutor, telefone ou animal..." autofocus>
+        <a class="btn" href="/tutor-form.html">+ Novo tutor</a>
+      </div>
+      <table>
+        <thead><tr><th>Nome</th><th>Telefone</th><th>Animais</th><th></th></tr></thead>
+        <tbody id="corpo"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="/js/common.js"></script>
+  <script src="/js/tutores.js"></script>
+</body>
+</html>
