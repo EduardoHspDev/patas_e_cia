@@ -1,70 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agenda — Patas & Cia</title>
-  <link rel="stylesheet" href="/css/style.css">
-</head>
-<body>
-  <header><a href="/">🐾 Patas &amp; Cia</a><nav><a href="/">Tutores</a><a href="/agenda.html">Agenda</a></nav></header>
-  <main>
-    <div class="card">
-      <h1>Agenda de consultas</h1>
-      <div id="alerta" class="alerta"></div>
-      <div class="nav-dia">
-        <button class="btn sec peq" id="ant" type="button">‹</button>
-        <input type="date" id="dia">
-        <button class="btn sec peq" id="prox" type="button">›</button>
-        <button class="btn sec peq" id="hoje" type="button">Hoje</button>
-      </div>
-      <table>
-        <thead><tr><th>Hora</th><th>Animal</th><th>Tutor</th><th>Motivo</th><th>Status</th><th></th></tr></thead>
-        <tbody id="corpo"></tbody>
-      </table>
-    </div>
-
-    <div class="card">
-      <h2 id="form-titulo">Nova consulta</h2>
-      <form id="form" novalidate>
-        <input type="hidden" name="id">
-        <div class="grade">
-          <div class="campo">
-            <label for="tutor">Tutor *</label>
-            <select id="tutor" name="tutor"><option value="">Selecione...</option></select>
-          </div>
-          <div class="campo">
-            <label for="animal_id">Animal *</label>
-            <select id="animal_id" name="animal_id" disabled><option value="">Selecione o tutor primeiro</option></select>
-            <span class="erro" data-erro="animal_id"></span>
-          </div>
-          <div class="campo">
-            <label for="data">Data *</label>
-            <input id="data" name="data" type="date">
-            <span class="erro" data-erro="data"></span>
-          </div>
-          <div class="campo">
-            <label for="hora">Horário *</label>
-            <select id="hora" name="hora" disabled><option value="">Escolha a data</option></select>
-            <span class="erro" data-erro="hora"></span>
-          </div>
-          <div class="campo">
-            <label for="motivo">Motivo *</label>
-            <input id="motivo" name="motivo" maxlength="150" placeholder="Vacina, retorno, check-up...">
-            <span class="erro" data-erro="motivo"></span>
-          </div>
-          <div class="campo">
-            <label for="observacoes">Observações</label>
-            <input id="observacoes" name="observacoes" maxlength="255">
-            <span class="erro" data-erro="observacoes"></span>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agenda — Patas & Cia</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/">🐾 Patas &amp; Cia</a>
+      <nav><a href="/">Tutores</a><a href="/agenda.html">Agenda</a></nav>
+    </header>
+    <main>
+      <div class="card">
+        <h1>Agenda de consultas</h1>
+        <div id="alerta" class="alerta"></div>
+        <div class="nav-dia">
+          <button class="btn sec peq" id="ant" type="button">‹</button>
+          <input type="date" id="dia" />
+          <button class="btn sec peq" id="prox" type="button">›</button>
+          <button class="btn sec peq" id="hoje" type="button">Hoje</button>
         </div>
-        <button class="btn" type="submit">Salvar</button>
-        <button class="btn sec" type="button" id="cancelar">Limpar / cancelar edição</button>
-      </form>
-    </div>
-  </main>
-  <script src="/js/common.js"></script>
-  <script src="/js/agenda.js"></script>
-</body>
+        <table>
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Animal</th>
+              <th>Tutor</th>
+              <th>Motivo</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="corpo"></tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2 id="form-titulo">Nova consulta</h2>
+        <form id="form" novalidate>
+          <input type="hidden" name="id" />
+          <div class="grade">
+            <div class="campo">
+              <label for="tutor">Tutor *</label>
+              <select id="tutor" name="tutor">
+                <option value="">Selecione...</option>
+              </select>
+            </div>
+            <div class="campo">
+              <label for="animal_id">Animal *</label>
+              <select id="animal_id" name="animal_id" disabled>
+                <option value="">Selecione o tutor primeiro</option>
+              </select>
+              <span class="erro" data-erro="animal_id"></span>
+            </div>
+            <div class="campo">
+              <label for="data">Data *</label>
+              <input id="data" name="data" type="date" />
+              <span class="erro" data-erro="data"></span>
+            </div>
+            <div class="campo">
+              <label for="hora">Horário *</label>
+              <select id="hora" name="hora" disabled>
+                <option value="">Escolha a data</option>
+              </select>
+              <span class="erro" data-erro="hora"></span>
+            </div>
+            <div class="campo">
+              <label for="motivo">Motivo *</label>
+              <input
+                id="motivo"
+                name="motivo"
+                maxlength="150"
+                placeholder="Vacina, retorno, check-up..."
+              />
+              <span class="erro" data-erro="motivo"></span>
+            </div>
+            <div class="campo">
+              <label for="observacoes">Observações</label>
+              <input id="observacoes" name="observacoes" maxlength="255" />
+              <span class="erro" data-erro="observacoes"></span>
+            </div>
+          </div>
+          <button class="btn" type="submit">Salvar</button>
+          <button class="btn sec" type="button" id="cancelar">
+            Limpar / cancelar edição
+          </button>
+        </form>
+      </div>
+    </main>
+    <script src="/js/common.js"></script>
+    <script src="/js/agenda.js"></script>
+  </body>
 </html>

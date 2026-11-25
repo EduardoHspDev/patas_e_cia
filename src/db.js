@@ -9,5 +9,6 @@ module.exports = mysql.createPool({
   database: process.env.DB_NAME || 'patas_cia',
   waitForConnections: true,
   connectionLimit: 10,
-  dateStrings: true // DATE volta como 'AAAA-MM-DD'
+  dateStrings: true, // DATE volta como 'AAAA-MM-DD'
+  ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : undefined
 });
