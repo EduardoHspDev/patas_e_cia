@@ -10,7 +10,7 @@ Sistema web para a Clínica Patas & Cia cadastrar tutores, animais e consultas, 
 
 A Clínica Patas & Cia atende cerca de 40 animais por semana e controlava tudo em um caderno. Quando um tutor ligava para remarcar, a recepcionista precisava folhear as páginas para achar o animal, e já houve consultas marcadas em duplicidade.
 
-Construí este sistema para resolver exatamente isso: achar um tutor ou um animal em segundos e impedir que dois atendimentos caiam no mesmo horário.
+Construímos este sistema para resolver exatamente isso: achar um tutor ou um animal em segundos e impedir que dois atendimentos caiam no mesmo horário.
 
 ## O que o sistema faz
 
@@ -94,23 +94,23 @@ patas_e_cia/
 | Animais | `GET/POST /api/tutores/:id/animais`, `GET/PUT/DELETE /api/animais/:id` |
 | Consultas | `GET/POST /api/consultas`, `PUT/DELETE /api/consultas/:id`, `PATCH /api/consultas/:id/status`, `GET /api/consultas/horarios?data=` |
 
-## Como publiquei
+## Como publicamos
 
-O site está na Vercel e o banco está em um MySQL na nuvem, porque a Vercel não consegue acessar o banco que roda no meu computador. Para isso criei o banco na nuvem, rodei o `database/criar_banco.js` apontando para ele, cadastrei as variáveis `DB_*` nas configurações da Vercel e publiquei com `vercel --prod`.
+O site está na Vercel e o banco está em um MySQL na nuvem, porque a Vercel não consegue acessar o banco que roda nos nossos computadores. Para isso criamos o banco na nuvem, rodamos o `database/criar_banco.js` apontando para ele, cadastramos as variáveis `DB_*` nas configurações da Vercel e publicamos com `vercel --prod`.
 
-## O que aprendi no caminho
+## O que aprendemos no caminho
 
-Nem tudo funcionou de primeira, e foi aí que mais aprendi:
+Nem tudo funcionou de primeira, e foi aí que mais aprendemos:
 
-- O PowerShell não aceita o `<` do comando do MySQL, e o `mysql` não funcionava até eu colocar a pasta `bin` dele no PATH do Windows.
-- O banco da nuvem não deixa criar tabelas em qualquer banco, então precisei usar o banco liberado para o meu usuário.
+- O PowerShell não aceita o `<` do comando do MySQL, e o `mysql` não funcionava até colocarmos a pasta `bin` dele no PATH do Windows.
+- O banco da nuvem não deixa criar tabelas em qualquer banco, então precisamos usar o banco liberado para o nosso usuário.
 - Na Vercel, o botão de *Redeploy* refaz o site com o código antigo. Para o código novo valer, foi preciso publicar de novo.
-- A pasta `node_modules` foi parar no repositório no começo. Aprendi a usar o `.gitignore` e a tirá-la com `git rm -r --cached`.
+- A pasta `node_modules` foi parar no repositório no começo. Aprendemos a usar o `.gitignore` e a tirá-la com `git rm -r --cached`.
 - Senhas de banco não podem aparecer em prints nem no GitHub.
 
 ## Uso de inteligência artificial
 
-Usei o Claude, uma IA da Anthropic, como apoio. Ele me ajudou a estruturar o código, explicar os erros e montar a documentação. Eu configurei o ambiente, criei e conectei o banco, fiz a publicação, testei o sistema e corrigi os problemas que apareceram pelo caminho.
+Usamos o Claude, uma IA da Anthropic, como apoio. Ele nos ajudou a estruturar o código, explicar os erros e montar a documentação. Nós configuramos o ambiente, criamos e conectamos o banco, fizemos a publicação, testamos o sistema e corrigimos os problemas que apareceram pelo caminho.
 
 ## Ideias para o futuro
 
@@ -121,13 +121,10 @@ Usei o Claude, uma IA da Anthropic, como apoio. Ele me ajudou a estruturar o có
 
 ## Autores
 
+- Eduardo Mesquita de Freitas (https://github.com/EduardoHspDev)
+- Julia Maia Santos (https://github.com/juliams1)
+- Luis Filipy Pereira de Sousa (https://github.com/filipysousa)
+- Luis Miguel Frazão de Sousa (https://github.com/luis-stat)
+- Rafael Maia Gomes (https://github.com/rafaelmaiads)
 
-Eduardo Mesquita de Freitas (https://github.com/EduardoHspDev)
-Julia Maia Santos (https://github.com/juliams1)
-Luis Filipy Pereira de Sousa (https://github/filipysousa)
-Luis Miguel Frazão de Sousa (https://github.com/luis-stat)
-Rafael Maia Gomes (https://github.com/rafaelmaiads)
-
-
-[Curso: ADS, disciplina: Desenvolvimento Web, instituição: UNIFOR]
-
+Curso: ADS · Disciplina: Desenvolvimento Web · Instituição: UNIFOR
